@@ -1,0 +1,2717 @@
+{
+  "name": "Masters",
+  "nameUnicode": "主数据",
+  "type": "module",
+  "usingTypes": [
+    {
+      "name": "Age",
+      "nameUnicode": "年龄",
+      "type": "basicType"
+    },
+    {
+      "name": "Name",
+      "nameUnicode": "姓名",
+      "type": "basicType"
+    },
+    {
+      "name": "Comment",
+      "nameUnicode": "备注",
+      "type": "basicType"
+    },
+    {
+      "name": "Code",
+      "nameUnicode": "编码",
+      "type": "basicType"
+    },
+    {
+      "name": "Name",
+      "nameUnicode": "名称",
+      "type": "basicType"
+    },
+    {
+      "name": "Spec",
+      "nameUnicode": "规格",
+      "type": "basicType"
+    },
+    {
+      "name": "Model",
+      "nameUnicode": "型号",
+      "type": "basicType"
+    },
+    {
+      "name": "Unit",
+      "nameUnicode": "单位",
+      "type": "basicType"
+    },
+    {
+      "name": "Abbr",
+      "nameUnicode": "简称",
+      "type": "basicType"
+    },
+    {
+      "name": "Address",
+      "nameUnicode": "地址",
+      "type": "basicType"
+    },
+    {
+      "name": "Phone",
+      "nameUnicode": "电话",
+      "type": "basicType"
+    },
+    {
+      "name": "Fax",
+      "nameUnicode": "传真",
+      "type": "basicType"
+    },
+    {
+      "name": "ZipCode",
+      "nameUnicode": "邮编",
+      "type": "basicType"
+    },
+    {
+      "name": "Remark",
+      "nameUnicode": "备注",
+      "type": "basicType"
+    },
+    {
+      "name": "PlanDate",
+      "nameUnicode": "计划日期",
+      "type": "basicType"
+    },
+    {
+      "name": "ActualDate",
+      "nameUnicode": "实际日期",
+      "type": "basicType"
+    },
+    {
+      "name": "ProduceDate",
+      "nameUnicode": "生产日期",
+      "type": "basicType"
+    },
+    {
+      "name": "WarrantyDate",
+      "nameUnicode": "保修日期",
+      "type": "basicType"
+    },
+    {
+      "name": "Amount",
+      "nameUnicode": "数量",
+      "type": "basicType"
+    },
+    {
+      "name": "StartDate",
+      "nameUnicode": "开始日期",
+      "type": "basicType"
+    },
+    {
+      "name": "EndDate",
+      "nameUnicode": "结束日期",
+      "type": "basicType"
+    },
+    {
+      "name": "Rating",
+      "nameUnicode": "评分",
+      "type": "basicType"
+    },
+    {
+      "name": "PlanAmount",
+      "nameUnicode": "计划数量",
+      "type": "basicType"
+    },
+    {
+      "name": "PlanStartDate",
+      "nameUnicode": "计划开始日期",
+      "type": "basicType"
+    },
+    {
+      "name": "PlanEndDate",
+      "nameUnicode": "计划结束日期",
+      "type": "basicType"
+    },
+    {
+      "name": "ActualStartDate",
+      "nameUnicode": "实际开始日期",
+      "type": "basicType"
+    },
+    {
+      "name": "ActualEndDate",
+      "nameUnicode": "实际结束日期",
+      "type": "basicType"
+    }
+  ],
+  "importEntities": [
+    {
+      "name": "Person",
+      "nameUnicode": "人员",
+      "moduleName": "HR",
+      "fields": [
+        {
+          "name": "meta",
+          "nameUnicode": "OpenID",
+          "type": {
+            "name": "Struct",
+            "nameUnicode": "结构",
+            "type": "structType"
+          },
+          "originalName": "meta"
+        },
+        {
+          "name": "department",
+          "nameUnicode": "部门",
+          "type": {
+            "name": "Department",
+            "nameUnicode": "部门",
+            "type": "masterEntityType"
+          },
+          "originalName": "department"
+        },
+        {
+          "name": "leader",
+          "nameUnicode": "上级",
+          "type": {
+            "name": "Leader",
+            "nameUnicode": "上级",
+            "type": "basicType"
+          },
+          "originalName": "leader"
+        },
+        {
+          "name": "name",
+          "nameUnicode": "名称",
+          "type": {
+            "name": "Name",
+            "nameUnicode": "名称",
+            "type": "basicType"
+          },
+          "originalName": "name"
+        }
+      ]
+    }
+  ],
+  "basicTypes": [
+    {
+      "name": "Age",
+      "nameUnicode": "年龄",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "Number",
+          "nameUnicode": "Number",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Name",
+      "nameUnicode": "姓名",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "String",
+          "nameUnicode": "String",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Comment",
+      "nameUnicode": "备注",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "String",
+          "nameUnicode": "String",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Code",
+      "nameUnicode": "编码",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "String",
+          "nameUnicode": "String",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Name",
+      "nameUnicode": "名称",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "String",
+          "nameUnicode": "String",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Spec",
+      "nameUnicode": "规格",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "String",
+          "nameUnicode": "String",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Model",
+      "nameUnicode": "型号",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "String",
+          "nameUnicode": "String",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Unit",
+      "nameUnicode": "单位",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "String",
+          "nameUnicode": "String",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Abbr",
+      "nameUnicode": "简称",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "String",
+          "nameUnicode": "String",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Address",
+      "nameUnicode": "地址",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "String",
+          "nameUnicode": "String",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Phone",
+      "nameUnicode": "电话",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "String",
+          "nameUnicode": "String",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Fax",
+      "nameUnicode": "传真",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "String",
+          "nameUnicode": "String",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "ZipCode",
+      "nameUnicode": "邮编",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "String",
+          "nameUnicode": "String",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Remark",
+      "nameUnicode": "备注",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "String",
+          "nameUnicode": "String",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "PlanDate",
+      "nameUnicode": "计划日期",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "Date",
+          "nameUnicode": "Date",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "ActualDate",
+      "nameUnicode": "实际日期",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "Date",
+          "nameUnicode": "Date",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "ProduceDate",
+      "nameUnicode": "生产日期",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "Date",
+          "nameUnicode": "Date",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "WarrantyDate",
+      "nameUnicode": "保修日期",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "Date",
+          "nameUnicode": "Date",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Amount",
+      "nameUnicode": "数量",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "Number",
+          "nameUnicode": "Number",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "StartDate",
+      "nameUnicode": "开始日期",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "Date",
+          "nameUnicode": "Date",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "EndDate",
+      "nameUnicode": "结束日期",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "Date",
+          "nameUnicode": "Date",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Rating",
+      "nameUnicode": "评分",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "Number",
+          "nameUnicode": "Number",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "PlanAmount",
+      "nameUnicode": "计划数量",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "Amount",
+          "nameUnicode": "数量",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "PlanStartDate",
+      "nameUnicode": "计划开始日期",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "StartDate",
+          "nameUnicode": "开始日期",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "PlanEndDate",
+      "nameUnicode": "计划结束日期",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "EndDate",
+          "nameUnicode": "结束日期",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "ActualStartDate",
+      "nameUnicode": "实际开始日期",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "StartDate",
+          "nameUnicode": "开始日期",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "ActualEndDate",
+      "nameUnicode": "实际结束日期",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "EndDate",
+          "nameUnicode": "结束日期",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "SupplierRating",
+      "nameUnicode": "供应商评分",
+      "type": "type",
+      "superType": {
+        "type": {
+          "name": "Number",
+          "nameUnicode": "Number",
+          "type": "basicType"
+        }
+      }
+    },
+    {
+      "name": "Area",
+      "nameUnicode": "面积",
+      "type": "type",
+      "annotations": {
+        "Unit": {
+          "value": "\"平方米\""
+        }
+      },
+      "superType": {
+        "type": {
+          "name": "Number",
+          "nameUnicode": "Number",
+          "type": "basicType"
+        }
+      }
+    }
+  ],
+  "dictTypes": [
+    {
+      "name": "Gender",
+      "nameUnicode": "性别",
+      "type": "dictType",
+      "values": [
+        {
+          "value": "男",
+          "valueUnicode": "男",
+          "code": "Male"
+        },
+        {
+          "value": "女",
+          "valueUnicode": "女",
+          "code": "Female"
+        },
+        {
+          "value": "不填",
+          "valueUnicode": "不填",
+          "code": "Unknown"
+        }
+      ]
+    },
+    {
+      "name": "Rank",
+      "nameUnicode": "等级",
+      "type": "dictType",
+      "values": [
+        {
+          "value": "优质",
+          "valueUnicode": "优质",
+          "code": "优质"
+        },
+        {
+          "value": "正常",
+          "valueUnicode": "正常",
+          "code": "正常"
+        },
+        {
+          "value": "一般",
+          "valueUnicode": "一般",
+          "code": "一般"
+        },
+        {
+          "value": "较差",
+          "valueUnicode": "较差",
+          "code": "较差"
+        },
+        {
+          "value": "很差",
+          "valueUnicode": "很差",
+          "code": "很差"
+        }
+      ]
+    },
+    {
+      "name": "MaterialCategory",
+      "nameUnicode": "物料分类",
+      "type": "dictType",
+      "values": [
+        {
+          "value": "原材料",
+          "valueUnicode": "原材料",
+          "code": "原材料"
+        },
+        {
+          "value": "半成品",
+          "valueUnicode": "半成品",
+          "code": "半成品"
+        },
+        {
+          "value": "成品",
+          "valueUnicode": "成品",
+          "code": "成品"
+        },
+        {
+          "value": "辅料",
+          "valueUnicode": "辅料",
+          "code": "辅料"
+        },
+        {
+          "value": "其他",
+          "valueUnicode": "其他",
+          "code": "其他"
+        }
+      ]
+    },
+    {
+      "name": "MaterialUnit",
+      "nameUnicode": "物料单位",
+      "type": "dictType",
+      "values": [
+        {
+          "value": "千克",
+          "valueUnicode": "千克",
+          "code": "千克"
+        },
+        {
+          "value": "克",
+          "valueUnicode": "克",
+          "code": "克"
+        },
+        {
+          "value": "毫克",
+          "valueUnicode": "毫克",
+          "code": "毫克"
+        },
+        {
+          "value": "升",
+          "valueUnicode": "升",
+          "code": "升"
+        },
+        {
+          "value": "毫升",
+          "valueUnicode": "毫升",
+          "code": "毫升"
+        },
+        {
+          "value": "立方米",
+          "valueUnicode": "立方米",
+          "code": "立方米"
+        },
+        {
+          "value": "立方厘米",
+          "valueUnicode": "立方厘米",
+          "code": "立方厘米"
+        },
+        {
+          "value": "立方毫米",
+          "valueUnicode": "立方毫米",
+          "code": "立方毫米"
+        },
+        {
+          "value": "米",
+          "valueUnicode": "米",
+          "code": "米"
+        },
+        {
+          "value": "厘米",
+          "valueUnicode": "厘米",
+          "code": "厘米"
+        },
+        {
+          "value": "毫米",
+          "valueUnicode": "毫米",
+          "code": "毫米"
+        },
+        {
+          "value": "毫秒",
+          "valueUnicode": "毫秒",
+          "code": "毫秒"
+        },
+        {
+          "value": "秒",
+          "valueUnicode": "秒",
+          "code": "秒"
+        },
+        {
+          "value": "分钟",
+          "valueUnicode": "分钟",
+          "code": "分钟"
+        },
+        {
+          "value": "小时",
+          "valueUnicode": "小时",
+          "code": "小时"
+        },
+        {
+          "value": "天",
+          "valueUnicode": "天",
+          "code": "天"
+        },
+        {
+          "value": "月",
+          "valueUnicode": "月",
+          "code": "月"
+        },
+        {
+          "value": "年",
+          "valueUnicode": "年",
+          "code": "年"
+        },
+        {
+          "value": "个",
+          "valueUnicode": "个",
+          "code": "个"
+        },
+        {
+          "value": "只",
+          "valueUnicode": "只",
+          "code": "只"
+        },
+        {
+          "value": "条",
+          "valueUnicode": "条",
+          "code": "条"
+        },
+        {
+          "value": "本",
+          "valueUnicode": "本",
+          "code": "本"
+        },
+        {
+          "value": "份",
+          "valueUnicode": "份",
+          "code": "份"
+        },
+        {
+          "value": "张",
+          "valueUnicode": "张",
+          "code": "张"
+        },
+        {
+          "value": "件",
+          "valueUnicode": "件",
+          "code": "件"
+        },
+        {
+          "value": "套",
+          "valueUnicode": "套",
+          "code": "套"
+        },
+        {
+          "value": "箱",
+          "valueUnicode": "箱",
+          "code": "箱"
+        },
+        {
+          "value": "包",
+          "valueUnicode": "包",
+          "code": "包"
+        },
+        {
+          "value": "瓶",
+          "valueUnicode": "瓶",
+          "code": "瓶"
+        },
+        {
+          "value": "罐",
+          "valueUnicode": "罐",
+          "code": "罐"
+        },
+        {
+          "value": "管",
+          "valueUnicode": "管",
+          "code": "管"
+        },
+        {
+          "value": "袋",
+          "valueUnicode": "袋",
+          "code": "袋"
+        },
+        {
+          "value": "盒",
+          "valueUnicode": "盒",
+          "code": "盒"
+        },
+        {
+          "value": "箱",
+          "valueUnicode": "箱",
+          "code": "箱"
+        }
+      ]
+    },
+    {
+      "name": "SupplierRank",
+      "nameUnicode": "供应商等级",
+      "type": "dictType",
+      "values": [
+        {
+          "value": "优质",
+          "valueUnicode": "优质",
+          "code": "优质"
+        },
+        {
+          "value": "正常",
+          "valueUnicode": "正常",
+          "code": "正常"
+        },
+        {
+          "value": "一般",
+          "valueUnicode": "一般",
+          "code": "一般"
+        },
+        {
+          "value": "较差",
+          "valueUnicode": "较差",
+          "code": "较差"
+        },
+        {
+          "value": "很差",
+          "valueUnicode": "很差",
+          "code": "很差"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "name": "Material",
+      "type": "entity",
+      "nameUnicode": "物料",
+      "fields": [
+        {
+          "name": "meta",
+          "nameUnicode": "OpenID",
+          "isMeta": true,
+          "isSubEntity": true,
+          "fields": [
+            {
+              "name": "openId",
+              "nameUnicode": "OpenID",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdAt",
+              "nameUnicode": "创建时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedAt",
+              "nameUnicode": "更新时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdBy",
+              "nameUnicode": "创建人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedBy",
+              "nameUnicode": "更新人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "deletedAt",
+              "nameUnicode": "删除时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "status",
+              "nameUnicode": "状态",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            }
+          ]
+        },
+        {
+          "name": "code",
+          "nameUnicode": "编码",
+          "isKey": true,
+          "type": {
+            "name": "Code",
+            "nameUnicode": "编码",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "name",
+          "nameUnicode": "名称",
+          "isUnique": true,
+          "type": {
+            "name": "Name",
+            "nameUnicode": "名称",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "spec",
+          "nameUnicode": "规格",
+          "isImportant": true,
+          "type": {
+            "name": "Spec",
+            "nameUnicode": "规格",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "materialUnit",
+          "nameUnicode": "物料单位",
+          "type": {
+            "name": "MaterialUnit",
+            "nameUnicode": "物料单位",
+            "type": "dictType"
+          }
+        },
+        {
+          "name": "materialCategory",
+          "nameUnicode": "物料分类",
+          "type": {
+            "name": "MaterialCategory",
+            "nameUnicode": "物料分类",
+            "type": "dictType"
+          }
+        },
+        {
+          "name": "comment",
+          "nameUnicode": "备注",
+          "isNullable": true,
+          "type": {
+            "name": "Comment",
+            "nameUnicode": "备注",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "ccc",
+          "nameUnicode": "大家",
+          "type": {
+            "name": "Code",
+            "nameUnicode": "编码",
+            "type": "basicType"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Customer",
+      "type": "entity",
+      "nameUnicode": "客户",
+      "fields": [
+        {
+          "name": "meta",
+          "nameUnicode": "OpenID",
+          "isMeta": true,
+          "isSubEntity": true,
+          "fields": [
+            {
+              "name": "openId",
+              "nameUnicode": "OpenID",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdAt",
+              "nameUnicode": "创建时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedAt",
+              "nameUnicode": "更新时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdBy",
+              "nameUnicode": "创建人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedBy",
+              "nameUnicode": "更新人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "deletedAt",
+              "nameUnicode": "删除时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "status",
+              "nameUnicode": "状态",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            }
+          ]
+        },
+        {
+          "name": "code",
+          "nameUnicode": "编码",
+          "isKey": true,
+          "type": {
+            "name": "Code",
+            "nameUnicode": "编码",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "name",
+          "nameUnicode": "名称",
+          "isUnique": true,
+          "type": {
+            "name": "Name",
+            "nameUnicode": "名称",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "abbr",
+          "nameUnicode": "简称",
+          "type": {
+            "name": "Abbr",
+            "nameUnicode": "简称",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "address",
+          "nameUnicode": "地址",
+          "type": {
+            "name": "Address",
+            "nameUnicode": "地址",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "fax",
+          "nameUnicode": "传真",
+          "type": {
+            "name": "Fax",
+            "nameUnicode": "传真",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "phone",
+          "nameUnicode": "电话",
+          "type": {
+            "name": "Phone",
+            "nameUnicode": "电话",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "zipCode",
+          "nameUnicode": "邮编",
+          "type": {
+            "name": "ZipCode",
+            "nameUnicode": "邮编",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "comment",
+          "nameUnicode": "备注",
+          "type": {
+            "name": "Comment",
+            "nameUnicode": "备注",
+            "type": "basicType"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Supplier",
+      "type": "entity",
+      "nameUnicode": "供应商",
+      "fields": [
+        {
+          "name": "meta",
+          "nameUnicode": "OpenID",
+          "isMeta": true,
+          "isSubEntity": true,
+          "fields": [
+            {
+              "name": "openId",
+              "nameUnicode": "OpenID",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdAt",
+              "nameUnicode": "创建时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedAt",
+              "nameUnicode": "更新时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdBy",
+              "nameUnicode": "创建人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedBy",
+              "nameUnicode": "更新人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "deletedAt",
+              "nameUnicode": "删除时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "status",
+              "nameUnicode": "状态",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            }
+          ]
+        },
+        {
+          "name": "code",
+          "nameUnicode": "编码",
+          "isKey": true,
+          "type": {
+            "name": "Code",
+            "nameUnicode": "编码",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "name",
+          "nameUnicode": "名称",
+          "isUnique": true,
+          "type": {
+            "name": "Name",
+            "nameUnicode": "名称",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "abbr",
+          "nameUnicode": "简称",
+          "type": {
+            "name": "Abbr",
+            "nameUnicode": "简称",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "supplierRank",
+          "nameUnicode": "供应商等级",
+          "type": {
+            "name": "SupplierRank",
+            "nameUnicode": "供应商等级",
+            "type": "dictType"
+          }
+        },
+        {
+          "name": "supplierRating",
+          "nameUnicode": "供应商评分",
+          "type": {
+            "name": "SupplierRating",
+            "nameUnicode": "供应商评分",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "phone",
+          "nameUnicode": "电话",
+          "type": {
+            "name": "Phone",
+            "nameUnicode": "电话",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "address",
+          "nameUnicode": "地址",
+          "type": {
+            "name": "Address",
+            "nameUnicode": "地址",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "fax",
+          "nameUnicode": "传真",
+          "type": {
+            "name": "Fax",
+            "nameUnicode": "传真",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "zipCode",
+          "nameUnicode": "邮编",
+          "type": {
+            "name": "ZipCode",
+            "nameUnicode": "邮编",
+            "type": "basicType"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Workshop",
+      "type": "entity",
+      "nameUnicode": "车间",
+      "fields": [
+        {
+          "name": "meta",
+          "nameUnicode": "OpenID",
+          "isMeta": true,
+          "isSubEntity": true,
+          "fields": [
+            {
+              "name": "openId",
+              "nameUnicode": "OpenID",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdAt",
+              "nameUnicode": "创建时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedAt",
+              "nameUnicode": "更新时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdBy",
+              "nameUnicode": "创建人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedBy",
+              "nameUnicode": "更新人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "deletedAt",
+              "nameUnicode": "删除时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "status",
+              "nameUnicode": "状态",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            }
+          ]
+        },
+        {
+          "name": "code",
+          "nameUnicode": "编码",
+          "isKey": true,
+          "type": {
+            "name": "Code",
+            "nameUnicode": "编码",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "name",
+          "nameUnicode": "名称",
+          "isUnique": true,
+          "type": {
+            "name": "Name",
+            "nameUnicode": "名称",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "area",
+          "nameUnicode": "面积",
+          "type": {
+            "name": "Area",
+            "nameUnicode": "面积",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "person",
+          "nameUnicode": "负责人",
+          "type": {
+            "name": "Person",
+            "nameUnicode": "人员",
+            "type": "entityType"
+          }
+        },
+        {
+          "name": "comment",
+          "nameUnicode": "备注",
+          "type": {
+            "name": "Comment",
+            "nameUnicode": "备注",
+            "type": "basicType"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Workstation",
+      "type": "entity",
+      "nameUnicode": "工位",
+      "fields": [
+        {
+          "name": "meta",
+          "nameUnicode": "OpenID",
+          "isMeta": true,
+          "isSubEntity": true,
+          "fields": [
+            {
+              "name": "openId",
+              "nameUnicode": "OpenID",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdAt",
+              "nameUnicode": "创建时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedAt",
+              "nameUnicode": "更新时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdBy",
+              "nameUnicode": "创建人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedBy",
+              "nameUnicode": "更新人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "deletedAt",
+              "nameUnicode": "删除时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "status",
+              "nameUnicode": "状态",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            }
+          ]
+        },
+        {
+          "name": "code",
+          "nameUnicode": "编码",
+          "isKey": true,
+          "type": {
+            "name": "Code",
+            "nameUnicode": "编码",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "name",
+          "nameUnicode": "名称",
+          "isUnique": true,
+          "type": {
+            "name": "Name",
+            "nameUnicode": "名称",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "workshop",
+          "nameUnicode": "所属车间",
+          "type": {
+            "name": "Workshop",
+            "nameUnicode": "车间",
+            "type": "masterEntityType"
+          }
+        },
+        {
+          "name": "comment",
+          "nameUnicode": "备注",
+          "type": {
+            "name": "Comment",
+            "nameUnicode": "备注",
+            "type": "basicType"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Equipment",
+      "type": "entity",
+      "nameUnicode": "设备",
+      "fields": [
+        {
+          "name": "meta",
+          "nameUnicode": "OpenID",
+          "isMeta": true,
+          "isSubEntity": true,
+          "fields": [
+            {
+              "name": "openId",
+              "nameUnicode": "OpenID",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdAt",
+              "nameUnicode": "创建时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedAt",
+              "nameUnicode": "更新时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdBy",
+              "nameUnicode": "创建人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedBy",
+              "nameUnicode": "更新人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "deletedAt",
+              "nameUnicode": "删除时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "status",
+              "nameUnicode": "状态",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            }
+          ]
+        },
+        {
+          "name": "code",
+          "nameUnicode": "编码",
+          "isKey": true,
+          "type": {
+            "name": "Code",
+            "nameUnicode": "编码",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "name",
+          "nameUnicode": "名称",
+          "isUnique": true,
+          "type": {
+            "name": "Name",
+            "nameUnicode": "名称",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "spec",
+          "nameUnicode": "规格",
+          "type": {
+            "name": "Spec",
+            "nameUnicode": "规格",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "model",
+          "nameUnicode": "型号",
+          "type": {
+            "name": "Model",
+            "nameUnicode": "型号",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "produceDate",
+          "nameUnicode": "生产日期",
+          "type": {
+            "name": "ProduceDate",
+            "nameUnicode": "生产日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "warrantyDate",
+          "nameUnicode": "保修日期",
+          "type": {
+            "name": "WarrantyDate",
+            "nameUnicode": "保修日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "workshop",
+          "nameUnicode": "所属车间",
+          "type": {
+            "name": "Workshop",
+            "nameUnicode": "车间",
+            "type": "masterEntityType"
+          }
+        },
+        {
+          "name": "comment",
+          "nameUnicode": "备注",
+          "type": {
+            "name": "Comment",
+            "nameUnicode": "备注",
+            "type": "basicType"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Product",
+      "type": "entity",
+      "nameUnicode": "产品",
+      "fields": [
+        {
+          "name": "meta",
+          "nameUnicode": "OpenID",
+          "isMeta": true,
+          "isSubEntity": true,
+          "fields": [
+            {
+              "name": "openId",
+              "nameUnicode": "OpenID",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdAt",
+              "nameUnicode": "创建时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedAt",
+              "nameUnicode": "更新时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdBy",
+              "nameUnicode": "创建人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedBy",
+              "nameUnicode": "更新人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "deletedAt",
+              "nameUnicode": "删除时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "status",
+              "nameUnicode": "状态",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            }
+          ]
+        },
+        {
+          "name": "code",
+          "nameUnicode": "编码",
+          "isKey": true,
+          "type": {
+            "name": "Code",
+            "nameUnicode": "编码",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "name",
+          "nameUnicode": "名称",
+          "isUnique": true,
+          "type": {
+            "name": "Name",
+            "nameUnicode": "名称",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "spec",
+          "nameUnicode": "规格",
+          "type": {
+            "name": "Spec",
+            "nameUnicode": "规格",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "model",
+          "nameUnicode": "型号",
+          "type": {
+            "name": "Model",
+            "nameUnicode": "型号",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "unit",
+          "nameUnicode": "单位",
+          "type": {
+            "name": "Unit",
+            "nameUnicode": "单位",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "comment",
+          "nameUnicode": "备注",
+          "type": {
+            "name": "Comment",
+            "nameUnicode": "备注",
+            "type": "basicType"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BOM",
+      "type": "entity",
+      "nameUnicode": "物料清单",
+      "fields": [
+        {
+          "name": "meta",
+          "nameUnicode": "OpenID",
+          "isMeta": true,
+          "isSubEntity": true,
+          "fields": [
+            {
+              "name": "openId",
+              "nameUnicode": "OpenID",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdAt",
+              "nameUnicode": "创建时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedAt",
+              "nameUnicode": "更新时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdBy",
+              "nameUnicode": "创建人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedBy",
+              "nameUnicode": "更新人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "deletedAt",
+              "nameUnicode": "删除时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "status",
+              "nameUnicode": "状态",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            }
+          ]
+        },
+        {
+          "name": "code",
+          "nameUnicode": "编码",
+          "isKey": true,
+          "type": {
+            "name": "Code",
+            "nameUnicode": "编码",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "name",
+          "nameUnicode": "名称",
+          "isUnique": true,
+          "type": {
+            "name": "Name",
+            "nameUnicode": "名称",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "product",
+          "nameUnicode": "产品",
+          "type": {
+            "name": "Product",
+            "nameUnicode": "产品",
+            "type": "masterEntityType"
+          }
+        },
+        {
+          "name": "material",
+          "nameUnicode": "物料",
+          "type": {
+            "name": "Material",
+            "nameUnicode": "物料",
+            "type": "masterEntityType"
+          }
+        },
+        {
+          "name": "amount",
+          "nameUnicode": "数量",
+          "type": {
+            "name": "Amount",
+            "nameUnicode": "数量",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "comment",
+          "nameUnicode": "备注",
+          "type": {
+            "name": "Comment",
+            "nameUnicode": "备注",
+            "type": "basicType"
+          }
+        }
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "name": "ProductionOrder",
+      "type": "transaction",
+      "nameUnicode": "生产订单",
+      "fields": [
+        {
+          "name": "meta",
+          "nameUnicode": "OpenID",
+          "isMeta": true,
+          "isSubEntity": true,
+          "fields": [
+            {
+              "name": "openId",
+              "nameUnicode": "OpenID",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdAt",
+              "nameUnicode": "创建时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedAt",
+              "nameUnicode": "更新时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdBy",
+              "nameUnicode": "创建人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedBy",
+              "nameUnicode": "更新人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "deletedAt",
+              "nameUnicode": "删除时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "status",
+              "nameUnicode": "状态",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            }
+          ]
+        },
+        {
+          "name": "dateTime",
+          "nameUnicode": "事务时间",
+          "isInternal": true,
+          "type": {
+            "name": "DateTime",
+            "nameUnicode": "DateTime",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "product",
+          "nameUnicode": "产品",
+          "type": {
+            "name": "Product",
+            "nameUnicode": "产品",
+            "type": "masterEntityType"
+          }
+        },
+        {
+          "name": "planAmount",
+          "nameUnicode": "计划数量",
+          "type": {
+            "name": "PlanAmount",
+            "nameUnicode": "计划数量",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "planStartDate",
+          "nameUnicode": "计划开始日期",
+          "type": {
+            "name": "PlanStartDate",
+            "nameUnicode": "计划开始日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "planEndDate",
+          "nameUnicode": "计划结束日期",
+          "type": {
+            "name": "PlanEndDate",
+            "nameUnicode": "计划结束日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "actualStartDate",
+          "nameUnicode": "实际开始日期",
+          "type": {
+            "name": "ActualStartDate",
+            "nameUnicode": "实际开始日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "actualEndDate",
+          "nameUnicode": "实际结束日期",
+          "type": {
+            "name": "ActualEndDate",
+            "nameUnicode": "实际结束日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "details",
+          "nameUnicode": "明细",
+          "isArray": true,
+          "arrayDims": [
+            {
+              "isDefineSize": false
+            }
+          ],
+          "type": {
+            "name": "Details",
+            "nameUnicode": "明细",
+            "type": "structType"
+          }
+        },
+        {
+          "name": "comment",
+          "nameUnicode": "备注",
+          "type": {
+            "name": "Comment",
+            "nameUnicode": "备注",
+            "type": "basicType"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ProductionTask",
+      "type": "transaction",
+      "nameUnicode": "生产任务",
+      "fields": [
+        {
+          "name": "meta",
+          "nameUnicode": "OpenID",
+          "isMeta": true,
+          "isSubEntity": true,
+          "fields": [
+            {
+              "name": "openId",
+              "nameUnicode": "OpenID",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdAt",
+              "nameUnicode": "创建时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedAt",
+              "nameUnicode": "更新时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdBy",
+              "nameUnicode": "创建人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedBy",
+              "nameUnicode": "更新人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "deletedAt",
+              "nameUnicode": "删除时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "status",
+              "nameUnicode": "状态",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            }
+          ]
+        },
+        {
+          "name": "dateTime",
+          "nameUnicode": "事务时间",
+          "isInternal": true,
+          "type": {
+            "name": "DateTime",
+            "nameUnicode": "DateTime",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "productionOrder",
+          "nameUnicode": "生产订单",
+          "type": {
+            "name": "ProductionOrder",
+            "nameUnicode": "生产订单",
+            "type": "transactionEntityType"
+          }
+        },
+        {
+          "name": "product",
+          "nameUnicode": "产品",
+          "type": {
+            "name": "Product",
+            "nameUnicode": "产品",
+            "type": "masterEntityType"
+          }
+        },
+        {
+          "name": "planAmount",
+          "nameUnicode": "计划数量",
+          "type": {
+            "name": "PlanAmount",
+            "nameUnicode": "计划数量",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "planStartDate",
+          "nameUnicode": "计划开始日期",
+          "type": {
+            "name": "PlanStartDate",
+            "nameUnicode": "计划开始日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "planEndDate",
+          "nameUnicode": "计划结束日期",
+          "type": {
+            "name": "PlanEndDate",
+            "nameUnicode": "计划结束日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "actualStartDate",
+          "nameUnicode": "实际开始日期",
+          "type": {
+            "name": "ActualStartDate",
+            "nameUnicode": "实际开始日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "actualEndDate",
+          "nameUnicode": "实际结束日期",
+          "type": {
+            "name": "ActualEndDate",
+            "nameUnicode": "实际结束日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "details",
+          "nameUnicode": "明细",
+          "isArray": true,
+          "arrayDims": [
+            {
+              "isDefineSize": false
+            }
+          ],
+          "type": {
+            "name": "Details",
+            "nameUnicode": "明细",
+            "type": "structType"
+          }
+        },
+        {
+          "name": "comment",
+          "nameUnicode": "备注",
+          "type": {
+            "name": "Comment",
+            "nameUnicode": "备注",
+            "type": "basicType"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PurchaseOrder",
+      "type": "transaction",
+      "nameUnicode": "采购订单",
+      "fields": [
+        {
+          "name": "meta",
+          "nameUnicode": "OpenID",
+          "isMeta": true,
+          "isSubEntity": true,
+          "fields": [
+            {
+              "name": "openId",
+              "nameUnicode": "OpenID",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdAt",
+              "nameUnicode": "创建时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedAt",
+              "nameUnicode": "更新时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdBy",
+              "nameUnicode": "创建人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedBy",
+              "nameUnicode": "更新人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "deletedAt",
+              "nameUnicode": "删除时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "status",
+              "nameUnicode": "状态",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            }
+          ]
+        },
+        {
+          "name": "dateTime",
+          "nameUnicode": "事务时间",
+          "isInternal": true,
+          "type": {
+            "name": "DateTime",
+            "nameUnicode": "DateTime",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "supplier",
+          "nameUnicode": "供应商",
+          "type": {
+            "name": "Supplier",
+            "nameUnicode": "供应商",
+            "type": "masterEntityType"
+          }
+        },
+        {
+          "name": "planAmount",
+          "nameUnicode": "计划数量",
+          "type": {
+            "name": "PlanAmount",
+            "nameUnicode": "计划数量",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "planStartDate",
+          "nameUnicode": "计划开始日期",
+          "type": {
+            "name": "PlanStartDate",
+            "nameUnicode": "计划开始日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "planEndDate",
+          "nameUnicode": "计划结束日期",
+          "type": {
+            "name": "PlanEndDate",
+            "nameUnicode": "计划结束日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "actualStartDate",
+          "nameUnicode": "实际开始日期",
+          "type": {
+            "name": "ActualStartDate",
+            "nameUnicode": "实际开始日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "actualEndDate",
+          "nameUnicode": "实际结束日期",
+          "type": {
+            "name": "ActualEndDate",
+            "nameUnicode": "实际结束日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "details",
+          "nameUnicode": "明细",
+          "isArray": true,
+          "arrayDims": [
+            {
+              "isDefineSize": false
+            }
+          ],
+          "type": {
+            "name": "Details",
+            "nameUnicode": "明细",
+            "type": "structType"
+          }
+        },
+        {
+          "name": "comment",
+          "nameUnicode": "备注",
+          "type": {
+            "name": "Comment",
+            "nameUnicode": "备注",
+            "type": "basicType"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PurchaseTask",
+      "type": "transaction",
+      "nameUnicode": "采购任务",
+      "fields": [
+        {
+          "name": "meta",
+          "nameUnicode": "OpenID",
+          "isMeta": true,
+          "isSubEntity": true,
+          "fields": [
+            {
+              "name": "openId",
+              "nameUnicode": "OpenID",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdAt",
+              "nameUnicode": "创建时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedAt",
+              "nameUnicode": "更新时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "createdBy",
+              "nameUnicode": "创建人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "updatedBy",
+              "nameUnicode": "更新人",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "deletedAt",
+              "nameUnicode": "删除时间",
+              "isMeta": true,
+              "type": {
+                "name": "Timestamp",
+                "nameUnicode": "Timestamp",
+                "type": "basicType"
+              }
+            },
+            {
+              "name": "status",
+              "nameUnicode": "状态",
+              "isMeta": true,
+              "type": {
+                "name": "String",
+                "nameUnicode": "String",
+                "type": "basicType"
+              }
+            }
+          ]
+        },
+        {
+          "name": "dateTime",
+          "nameUnicode": "事务时间",
+          "isInternal": true,
+          "type": {
+            "name": "DateTime",
+            "nameUnicode": "DateTime",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "purchaseOrder",
+          "nameUnicode": "采购订单",
+          "type": {
+            "name": "PurchaseOrder",
+            "nameUnicode": "采购订单",
+            "type": "transactionEntityType"
+          }
+        },
+        {
+          "name": "material",
+          "nameUnicode": "物料",
+          "type": {
+            "name": "Material",
+            "nameUnicode": "物料",
+            "type": "masterEntityType"
+          }
+        },
+        {
+          "name": "planAmount",
+          "nameUnicode": "计划数量",
+          "type": {
+            "name": "PlanAmount",
+            "nameUnicode": "计划数量",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "planStartDate",
+          "nameUnicode": "计划开始日期",
+          "type": {
+            "name": "PlanStartDate",
+            "nameUnicode": "计划开始日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "planEndDate",
+          "nameUnicode": "计划结束日期",
+          "type": {
+            "name": "PlanEndDate",
+            "nameUnicode": "计划结束日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "actualStartDate",
+          "nameUnicode": "实际开始日期",
+          "type": {
+            "name": "ActualStartDate",
+            "nameUnicode": "实际开始日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "actualEndDate",
+          "nameUnicode": "实际结束日期",
+          "type": {
+            "name": "ActualEndDate",
+            "nameUnicode": "实际结束日期",
+            "type": "basicType"
+          }
+        },
+        {
+          "name": "comment",
+          "nameUnicode": "备注",
+          "type": {
+            "name": "Comment",
+            "nameUnicode": "备注",
+            "type": "basicType"
+          }
+        }
+      ]
+    }
+  ]
+}
